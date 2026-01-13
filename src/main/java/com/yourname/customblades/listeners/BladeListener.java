@@ -104,7 +104,7 @@ public class BladeListener implements Listener {
             victim.getLocation().add(0, 1, 0), 30, 0.3, 0.5, 0.3, 0.1);
         victim.getWorld().spawnParticle(Particle.WITCH, 
             victim.getLocation().add(0, 1, 0), 20, 0.3, 0.5, 0.3, 0.05);
-        victim.playSound(victim.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 0.7f);
+        victim.getWorld().playSound(victim.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 0.7f);
         
         player.sendMessage("§5§l⚡ §dGravity Shattered!");
     }
@@ -164,7 +164,7 @@ public class BladeListener implements Listener {
     private void handleEternalNightmarePassive(Player player, LivingEntity victim, double damage) {
         double lifestealPercent = plugin.getConfigManager().getLifestealPercent() / 100.0;
         double healAmount = damage * lifestealPercent;
-        double maxHealth = player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue();
+        double maxHealth = player.getAttribute(Attribute.MAX_HEALTH).getValue();
         double newHealth = Math.min(player.getHealth() + healAmount, maxHealth);
         player.setHealth(newHealth);
         
@@ -180,7 +180,7 @@ public class BladeListener implements Listener {
             victim.getLocation().add(0, 1, 0), 25, 0.5, 0.5, 0.5, 0.1);
         victim.getWorld().spawnParticle(Particle.DAMAGE_INDICATOR, 
             victim.getLocation().add(0, 1, 0), 15, 0.3, 0.5, 0.3, 0);
-        victim.playSound(victim.getLocation(), Sound.ENTITY_PHANTOM_HURT, 1.0f, 0.5f);
+        victim.getWorld().playSound(victim.getLocation(), Sound.ENTITY_PHANTOM_HURT, 1.0f, 0.5f);
         
         player.sendMessage("§4§l❤ §cDrained §e" + String.format("%.1f", healAmount) + " §cHP");
     }
@@ -195,7 +195,7 @@ public class BladeListener implements Listener {
             victim.getLocation().add(0, 1, 0), 25, 0.3, 0.5, 0.3, 0.05);
         victim.getWorld().spawnParticle(Particle.GLOW, 
             victim.getLocation().add(0, 1, 0), 15, 0.3, 0.5, 0.3, 0);
-        victim.playSound(victim.getLocation(), Sound.BLOCK_BELL_USE, 1.0f, 1.5f);
+        victim.getWorld().playSound(victim.getLocation(), Sound.BLOCK_BELL_USE, 1.0f, 1.5f);
     }
     
     // CELESTIAL ANNIHILATOR ACTIVE - Divine Storm
@@ -256,4 +256,4 @@ public class BladeListener implements Listener {
             }
         }.runTaskTimer(plugin, 0L, 2L);
     }
-            }
+}
