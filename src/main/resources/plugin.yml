@@ -1,1 +1,28 @@
-
+name: CustomBlades
+version: 2.0.0
+main: com.yourname.customblades.CustomBlades
+api-version: '1.21'
+author: YourName
+description: Advanced Custom Blades with Rituals and Abilities
+commands:
+  blades:
+    description: Main blade command
+    usage: /blades <give|giveall|recipe|info>
+    permission: customblades.command
+  ritual:
+    description: Manage rituals
+    usage: /ritual <time> [minutes]
+    permission: customblades.admin
+permissions:
+  customblades.command:
+    description: Use blade commands
+    default: op
+  customblades.admin:
+    description: Admin commands
+    default: op
+  customblades.craft:
+    description: Allows crafting blades
+    default: true
+  customblades.use:
+    description: Allows using blade abilities
+    default: true
