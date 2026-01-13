@@ -1,1 +1,28 @@
+# CustomBlades Configuration
 
+# Ritual Settings
+ritual:
+  default-time: 600  # 10 minutes in seconds
+  allow-time-change: true
+
+# Ability Settings
+abilities:
+  void-reaper:
+    launch-height: 4.0  # Blocks to launch enemies
+    chicken-count: 5    # Number of TNT chickens
+    cooldown: 15        # Seconds
+  
+  eternal-nightmare:
+    lifesteal-percent: 40.0  # Percentage of damage healed
+  
+  celestial-annihilator:
+    cooldown: 20        # Seconds
+
+# Particle Settings
+particles:
+  enabled: true
+  density: 1.0  # Particle density multiplier
+
+# Messages
+messages:
+  prefix: "§6§lCustomBlades §8»§r"
