@@ -1,1 +1,35 @@
+# Blade Crafting Recipes
+# Players can modify these in-game using /blades recipe
 
+blades:
+  void_reaper:
+    shape:
+      - "EEE"
+      - "ESE"
+      - " N "
+    ingredients:
+      E: ENDER_EYE
+      S: NETHERITE_SWORD
+      N: NETHER_STAR
+  
+  eternal_nightmare:
+    shape:
+      - "DDD"
+      - "WSW"
+      - " O "
+    ingredients:
+      D: DIAMOND_BLOCK
+      W: WITHER_SKELETON_SKULL
+      S: NETHERITE_SWORD
+      O: OBSIDIAN
+  
+  celestial_annihilator:
+    shape:
+      - "BBB"
+      - "CSC"
+      - " E "
+    ingredients:
+      B: BEACON
+      C: END_CRYSTAL
+      S: NETHERITE_SWORD
+      E: ELYTRA
