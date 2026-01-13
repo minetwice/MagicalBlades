@@ -92,66 +92,6 @@ Build Steps
 git clone https://github.com/yourusername/CustomBlades.git
 cd CustomBlades
 
-# Build with Maven
-mvn clean package
-
-# Find compiled JAR in target/ folder
-GitHub Actions Auto-Build
-Automatically builds on push to main/master/dev
-Uploads artifacts for each build
-Creates releases on version tags
-📁 Project Structure
-CustomBlades/
-├── .github/
-│   └── workflows/
-│       └── maven-build.yml
-├── src/
-│   └── main/
-│       ├── java/com/yourname/customblades/
-│       │   ├── CustomBlades.java
-│       │   ├── commands/
-│       │   │   ├── BladesCommand.java
-│       │   │   └── RitualCommand.java
-│       │   ├── enums/
-│       │   │   └── BladeType.java
-│       │   ├── listeners/
-│       │   │   ├── BladeListener.java
-│       │   │   ├── CraftListener.java
-│       │   │   ├── RecipeMenuListener.java
-│       │   │   └── ParticleListener.java
-│       │   ├── managers/
-│       │   │   ├── BladeManager.java
-│       │   │   ├── RitualManager.java
-│       │   │   ├── RecipeManager.java
-│       │   │   ├── ParticleManager.java
-│       │   │   └── ConfigManager.java
-│       │   ├── menus/
-│       │   │   ├── RecipeListMenu.java
-│       │   │   └── RecipeEditorMenu.java
-│       │   └── objects/
-│       │       └── Ritual.java
-│       └── resources/
-│           ├── plugin.yml
-│           ├── config.yml
-│           └── recipes.yml
-├── pom.xml
-├── .gitignore
-└── README.md
-⚙️ Configuration
-config.yml
-ritual:
-  default-time: 600  # 10 minutes
-
-abilities:
-  void-reaper:
-    launch-height: 4.0
-    chicken-count: 5
-    cooldown: 15
-  eternal-nightmare:
-    lifesteal-percent: 40.0
-  celestial-annihilator:
-    cooldown: 20
-
 particles:
   enabled: true
   density: 1.0
